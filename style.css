@@ -245,7 +245,7 @@ section {
 
 /* the first section sits right under the contact row */
 section:first-of-type {
-  padding-top: 2px;
+  padding-top: 3px;
 }
 
 h2 {
