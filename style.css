@@ -134,7 +134,7 @@ main {
   z-index: 1;
   width: min(100% - 3rem, var(--measure));
   margin: 0 auto;
-  padding: clamp(3.4rem, 9vh, 6rem) 0 3rem;
+  padding: clamp(3rem, 8vh, 5rem) 0 2.4rem;
 }
 
 .mono {
@@ -240,7 +240,7 @@ h1 {
 /* ---------- sections ---------- */
 
 section {
-  padding-top: 2.4rem;
+  padding-top: 1.7rem;
 }
 
 h2 {
