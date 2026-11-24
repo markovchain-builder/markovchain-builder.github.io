@@ -174,12 +174,29 @@ a:focus-visible {
 }
 
 .path {
-  margin: 0 0 1rem;
+  margin: 0 0 0.7rem;
   color: #6f7d99;
 }
 
 .path .tilde {
   color: var(--teal-dim);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  flex: none;
+  width: 104px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow:
+    0 14px 34px -14px rgba(77, 107, 254, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 h1 {
@@ -497,6 +514,15 @@ footer {
   main {
     width: min(100% - 2.4rem, var(--measure));
     padding-top: 3rem;
+  }
+
+  .identity {
+    gap: 1rem;
+  }
+
+  .avatar {
+    width: 82px;
+    border-radius: 10px;
   }
 
   .work-head {
