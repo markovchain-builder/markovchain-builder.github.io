@@ -170,7 +170,7 @@ a:focus-visible {
 /* ---------- masthead ---------- */
 
 .masthead {
-  padding-bottom: 2.6rem;
+  padding-bottom: 0.35rem;
 }
 
 .path {
@@ -241,6 +241,11 @@ h1 {
 
 section {
   padding-top: 1.7rem;
+}
+
+/* the first section sits right under the contact row */
+section:first-of-type {
+  padding-top: 0.55rem;
 }
 
 h2 {
