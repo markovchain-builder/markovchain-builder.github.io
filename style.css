@@ -170,7 +170,7 @@ a:focus-visible {
 /* ---------- masthead ---------- */
 
 .masthead {
-  padding-bottom: 0;
+  padding-bottom: 1px;
 }
 
 .path {
