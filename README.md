@@ -18,6 +18,8 @@ Single-page academic homepage. Plain HTML + one CSS file, no build step, no depe
 there is no light palette.
 - `assets/argus-teaser.jpg` is the Argus figure from the technical report
   (CC BY 4.0).
+- `assets/constellation.svg` is the background star chart; regenerate or swap it
+  freely — it is one `<div class="constellation">` layer in `index.html`.
 - Preview locally: `python3 -m http.server 8000`, then open
   <http://localhost:8000>.
 
