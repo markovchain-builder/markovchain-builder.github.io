@@ -4,15 +4,16 @@
    ------------------------------------------------------------------ */
 
 :root {
-  --bg: #0e1113;
-  --panel: #14191c;
-  --ink: #e7e4dd;
-  --ink-soft: #c6c2ba;
-  --muted: #8b949e;
-  --line: #242b2f;
-  --line-soft: #1c2226;
-  --teal: #4ec9a8;
-  --teal-dim: #2f6f5f;
+  /* deep-space blue, not black */
+  --bg: #070c1a;
+  --panel: #0d1426;
+  --ink: #e6ecf7;
+  --ink-soft: #c2ccdf;
+  --muted: #8b98b3;
+  --line: #1d2740;
+  --line-soft: #16203a;
+  --teal: #63e2c6;
+  --teal-dim: #2e7f74;
   --amber: #d8a657;
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
@@ -40,22 +41,68 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* a very faint 12-column grid, like a plotting pad */
+/* night sky: nebula washes + two depths of stars */
 .grid-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
     radial-gradient(
-      60rem 40rem at 78% -10%,
-      rgba(78, 201, 168, 0.07),
+      55rem 38rem at 82% -8%,
+      rgba(38, 92, 160, 0.32),
+      transparent 62%
+    ),
+    radial-gradient(
+      46rem 34rem at 6% 4%,
+      rgba(58, 60, 140, 0.26),
       transparent 60%
+    ),
+    radial-gradient(
+      60rem 44rem at 96% 92%,
+      rgba(20, 110, 110, 0.16),
+      transparent 62%
+    ),
+    radial-gradient(
+      44rem 40rem at 22% 88%,
+      rgba(104, 60, 130, 0.14),
+      transparent 64%
     );
-  background-size:
-    25% 100%,
-    100% 100%;
+  background-size: 100% 100%;
+}
+
+/* stars, two parallax depths */
+.grid-bg::before,
+.grid-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+}
+
+.grid-bg::before {
+  opacity: 0.55;
+  background-image:
+    radial-gradient(1.4px 1.4px at 24px 38px, #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 152px 96px, #dce9ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 92px 172px, #ffffff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 208px 54px, #eaf1ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 46px 214px, #cfe0ff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 178px 236px, #ffffff 50%, transparent 51%),
+    radial-gradient(1px 1px at 118px 24px, #ffffff 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 254px 150px, #e6eeff 50%, transparent 51%);
+  background-size: 290px 290px;
+}
+
+.grid-bg::after {
+  opacity: 0.3;
+  background-image:
+    radial-gradient(1px 1px at 38px 88px, #ffffff 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 196px 32px, #dfe9ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 132px 168px, #ffffff 50%, transparent 51%),
+    radial-gradient(1.1px 1.1px at 228px 210px, #d7e6ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 64px 248px, #ffffff 50%, transparent 51%);
+  background-size: 430px 430px;
 }
 
 main {
@@ -104,7 +151,7 @@ a:focus-visible {
 
 .path {
   margin: 0 0 1rem;
-  color: #6f7b82;
+  color: #6f7d99;
 }
 
 .path .tilde {
@@ -221,7 +268,7 @@ p a {
   padding: 5px 8px;
   border: 1px solid var(--line);
   border-radius: 99px;
-  color: #9aa7ae;
+  color: #9aa8c4;
   white-space: nowrap;
 }
 
@@ -280,16 +327,16 @@ figure img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid #2b3439;
+  border: 1px solid #2a3852;
   border-radius: 8px;
-  background: #f7f4ec;
+  background: #f6f3ea;
 }
 
 figcaption {
   margin-top: 0.55rem;
   font-size: 11px;
   line-height: 1.6;
-  color: #7d888f;
+  color: #7f8ca6;
 }
 
 .links {
@@ -301,7 +348,7 @@ figcaption {
 
 .note {
   margin: 1.2rem 0 0;
-  color: #7d888f;
+  color: #7f8ca6;
   font-size: 11.5px;
 }
 
@@ -324,7 +371,7 @@ footer {
   padding: 1.4rem 0 3rem;
   border-top: 1px solid var(--line-soft);
   font-size: 11px;
-  color: #6d7880;
+  color: #6f7c95;
 }
 
 /* ---------- narrow ---------- */
@@ -337,12 +384,6 @@ footer {
   main {
     width: min(100% - 2.4rem, var(--measure));
     padding-top: 3rem;
-  }
-
-  .grid-bg {
-    background-size:
-      50% 100%,
-      100% 100%;
   }
 
   .work-head {

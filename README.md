@@ -14,7 +14,8 @@ Single-page academic homepage. Plain HTML + one CSS file, no build step, no depe
 
 - Text lives directly in `index.html`, one `<section>` per topic.
 - Colours are CSS variables at the top of `style.css` (`--bg`, `--ink`, `--teal`,
-  `--line`). The design is dark by default — there is no light palette.
+  `--line`). The design is a deep-space blue with a faint nebula wash and star field —
+there is no light palette.
 - `assets/argus-teaser.jpg` is the Argus figure from the technical report
   (CC BY 4.0).
 - Preview locally: `python3 -m http.server 8000`, then open
