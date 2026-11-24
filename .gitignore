@@ -1,5 +1,5 @@
 .chrome-profile/
-shot-*.png
-preview-*.png
+mockups/
+*.png
 mobile-frame.html
 .DS_Store

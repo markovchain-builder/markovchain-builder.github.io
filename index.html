@@ -8,31 +8,141 @@
       name="description"
       content="Hangxi Guo — undergraduate researcher at CUHK-Shenzhen. AI systems, agent runtimes, and post-training."
     />
+    <meta name="color-scheme" content="dark" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="data:," />
-    <meta name="color-scheme" content="light dark" />
   </head>
   <body>
-    <div class="wash" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
 
     <main>
       <header class="masthead">
-        <p class="kicker">Undergraduate researcher</p>
+        <p class="mono path"><span class="tilde">~</span>/hangxi-guo</p>
         <h1>Hangxi Guo</h1>
+        <p class="mono role">undergraduate researcher · ai systems / agent runtimes</p>
         <p class="lede">
           I work on the layer between a model and its environment — the runtime,
           harness, and feedback signal that let an agent keep improving without
           touching its weights.
         </p>
-        <nav class="contact" aria-label="Contact">
-          <a href="mailto:keepstudying931@gmail.com">Email</a>
-          <a href="https://github.com/markovchain-builder">GitHub</a>
-          <a href="https://arxiv.org/abs/2610.11384">arXiv</a>
+        <nav class="contact mono" aria-label="Contact">
+          <a href="mailto:keepstudying931@gmail.com">email</a>
+          <a href="https://github.com/markovchain-builder">github</a>
+          <a href="https://arxiv.org/abs/2610.11384">arxiv</a>
         </nav>
       </header>
 
+      <section aria-labelledby="papers">
+        <h2 id="papers">papers</h2>
+
+        <article class="row">
+          <h3>
+            <a href="https://arxiv.org/abs/2610.11384"
+              >Environmental Feedback Modeling Matters: Rethinking Feedback
+              Treatment in Agentic Hindsight Self-Distillation</a
+            >
+          </h3>
+          <p class="byline">Hangxi Guo, Fengyuan Liu, Yue Wang, et al.</p>
+          <p class="badges">
+            <span class="badge hot">first author</span>
+            <span class="badge">arXiv 2610.11384</span>
+            <span class="badge">2026</span>
+          </p>
+        </article>
+
+        <article class="row">
+          <h3>
+            <a href="https://arxiv.org/abs/2610.11373"
+              >From a Prompt to Repertoires: Evolving Functional Repertoires
+              Enable LLM Continual Learning</a
+            >
+          </h3>
+          <p class="byline">Fengyuan Liu, Yue Wang, Hangxi Guo, et al.</p>
+          <p class="badges">
+            <span class="badge">co-author</span>
+            <span class="badge">arXiv 2610.11373</span>
+            <span class="badge">2026</span>
+          </p>
+        </article>
+
+        <article class="row">
+          <h3>
+            <a href="https://arxiv.org/abs/2608.05144"
+              >Argus: A General-Purpose Agentic Reasoning Runtime for
+              Long-Horizon Tasks</a
+            >
+          </h3>
+          <p class="byline">
+            Boxiu Li, Zimo Wen, Yijia Fan, …, Hangxi Guo, et al.
+          </p>
+          <p class="badges">
+            <span class="badge">contributor</span>
+            <span class="badge">arXiv 2608.05144</span>
+            <span class="badge">Microsoft · SJTU</span>
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="code">
+        <h2 id="code">code &amp; demos</h2>
+
+        <article class="work">
+          <div class="work-head">
+            <h3><a href="https://github.com/lbx154/Argus">Argus</a></h3>
+            <span class="mono work-kind">agentic runtime · 5 merged PRs</span>
+          </div>
+          <figure>
+            <a href="https://argusbot.cn"
+              ><img
+                src="assets/argus-teaser.jpg"
+                alt="Argus results across seven arenas: SWE-Bench Pro 78 vs 59 for direct Copilot, AARRI-Bench 76.8, kernel optimisation on SOL-ExecBench, and token-cost comparisons."
+                loading="lazy"
+            /></a>
+            <figcaption class="mono">
+              Argus across seven arenas — figure from the technical report
+              (CC BY 4.0). Click to open the project site.
+            </figcaption>
+          </figure>
+          <p>
+            A self-evolving multi-agent runtime for long-horizon work: Manager,
+            Planner, Engineer and Reviewer hand work to each other through
+            durable project state, so a mission can run for days. I contributed
+            the publication-figure pipeline, daemon reliability fixes, and
+            review-context budgeting.
+          </p>
+          <p class="links mono">
+            <a href="https://argusbot.cn">website ↗</a>
+            <a href="https://www.youtube.com/watch?v=i8Qy9HCboQE">video demo ↗</a>
+            <a href="https://arxiv.org/abs/2608.05144">report ↗</a>
+            <a href="https://github.com/lbx154/Argus">code ↗</a>
+          </p>
+        </article>
+
+        <article class="row">
+          <h3>
+            <a href="https://github.com/fla-org/flash-linear-attention/pull/1045"
+              >TileLang RWKV6 intra kernel</a
+            >
+          </h3>
+          <p class="byline">
+            An opt-in TileLang backend for the RWKV6 intra-chunk kernel, merged
+            upstream into flash-linear-attention (PR #1045).
+          </p>
+          <p class="badges">
+            <span class="badge hot">merged</span>
+            <span class="badge">GPU kernels</span>
+            <span class="badge">+318 / −2 in 5 files</span>
+          </p>
+        </article>
+
+        <p class="note mono">
+          23 merged pull requests across upstream projects, including the
+          libraries above.
+        </p>
+      </section>
+
       <section aria-labelledby="about">
-        <h2 id="about"><span class="num">01</span> About</h2>
+        <h2 id="about">about</h2>
         <p>
           I am a third-year undergraduate at
           <a href="https://www.cuhk.edu.cn/en"
@@ -47,121 +157,22 @@
           Today I work on <em>AI systems</em>, including heterogeneous computing
           (chips and accelerators) — which has meant shipping kernel-level work
           upstream — and on <em>data-centric AI</em> such as midtrain data for
-          LLMs. I came to this from agentic AI — specifically
-          agent infrastructure — and from large language model post-training.
-          The question underneath all of it is recursive self-improvement (RSI):
-          how much of an agent's improvement can live outside its weights.
+          LLMs. I came to this from agentic AI — specifically agent
+          infrastructure — and from large language model post-training. The
+          question underneath all of it is recursive self-improvement (RSI): how
+          much of an agent's improvement can live outside its weights.
         </p>
-        <p class="small">
+        <p class="muted">
           Broader interests: MoE architecture training, agent harnesses, and
           agent-based 3D generation and diffusion LLMs. Before AI I studied
-          operations research, optimization theory, and stochastic
-          processes — mostly how to reason about a system in terms of what can
-          be measured and verified, which is still how I approach problems.
+          operations research, optimization theory, and stochastic processes —
+          mostly how to reason about a system in terms of what can be measured
+          and verified, which is still how I approach problems.
         </p>
       </section>
 
-      <section aria-labelledby="papers">
-        <h2 id="papers"><span class="num">02</span> Selected preprints</h2>
-
-        <article class="paper">
-          <h3>
-            <a href="https://arxiv.org/abs/2610.11384"
-              >Environmental Feedback Modeling Matters: Rethinking Feedback
-              Treatment in Agentic Hindsight Self-Distillation</a
-            >
-          </h3>
-          <p class="authors">
-            <strong>Hangxi Guo</strong>, Fengyuan Liu, Yue Wang, et al.
-          </p>
-          <p class="meta">
-            <span class="tag">arXiv 2610.11384</span>
-            <span class="tag">2026</span>
-            <span class="tag tag-accent">First author</span>
-          </p>
-        </article>
-
-        <article class="paper">
-          <h3>
-            <a href="https://arxiv.org/abs/2610.11373"
-              >From a Prompt to Repertoires: Evolving Functional Repertoires
-              Enable LLM Continual Learning</a
-            >
-          </h3>
-          <p class="authors">Fengyuan Liu, Yue Wang, <strong>Hangxi Guo</strong>, et al.</p>
-          <p class="meta">
-            <span class="tag">arXiv 2610.11373</span>
-            <span class="tag">2026</span>
-            <span class="tag">Co-author</span>
-          </p>
-        </article>
-
-        <article class="paper">
-          <h3>
-            <a href="https://arxiv.org/abs/2608.05144"
-              >Argus: A General-Purpose Agentic Reasoning Runtime for Long-Horizon
-              Tasks</a
-            >
-          </h3>
-          <p class="authors">
-            Boxiu Li, Zimo Wen, Yijia Fan, …, <strong>Hangxi Guo</strong>, et al.
-          </p>
-          <p class="meta">
-            <span class="tag">arXiv 2608.05144</span>
-            <span class="tag">Microsoft · SJTU</span>
-            <span class="tag">Contributor</span>
-          </p>
-        </article>
-      </section>
-
-      <section aria-labelledby="code">
-        <h2 id="code"><span class="num">03</span> Code</h2>
-
-        <article class="entry">
-          <h3>
-            <a href="https://github.com/fla-org/flash-linear-attention/pull/1045"
-              >TileLang RWKV6 intra kernel</a
-            >
-          </h3>
-          <p class="authors">
-            An opt-in TileLang backend for the RWKV6 intra-chunk kernel,
-            <strong>merged upstream</strong> into
-            <a href="https://github.com/fla-org/flash-linear-attention"
-              ><span class="nowrap">flash-linear-attention</span></a
-            >
-            (PR #1045).
-          </p>
-          <p class="meta">
-            <span class="tag">GPU kernels</span>
-            <span class="tag">TileLang</span>
-            <span class="tag tag-accent">Merged</span>
-          </p>
-        </article>
-
-        <article class="entry">
-          <h3>
-            <a href="https://github.com/lbx154/Argus">Argus — agentic runtime</a>
-          </h3>
-          <p class="authors">
-            A self-evolving multi-agent runtime for long-horizon research.
-            Merged PRs to the runtime cover daemon reliability, publication
-            figure pipelines, and review-context budgeting.
-          </p>
-          <p class="meta">
-            <span class="tag">Python</span>
-            <span class="tag">Multi-agent</span>
-            <span class="tag">5 merged PRs</span>
-          </p>
-        </article>
-
-        <p class="small">
-          23 merged pull requests across upstream projects, including the
-          libraries above.
-        </p>
-      </section>
-
-      <section aria-labelledby="now">
-        <h2 id="now"><span class="num">04</span> Currently</h2>
+      <section aria-labelledby="currently">
+        <h2 id="currently">currently</h2>
         <p>
           Open to academic collaborations and research internships. The fastest
           way to reach me is
@@ -170,9 +181,9 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="mono">
       <span>© 2026 Hangxi Guo</span>
-      <span>Built with plain HTML, ~1 file of CSS.</span>
+      <span>plain html · one css file</span>
     </footer>
   </body>
 </html>
